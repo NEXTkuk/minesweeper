@@ -217,10 +217,10 @@ function render() {
 
 function renderAudio() {
   if (audio === 'on') {
-    soundEl.innerHTML = '<img id="sound" src="/images/sound_on.png">';
+    soundEl.innerHTML = '<img id="sound" src="./images/sound_on.png">';
     music.play();
   } else if (audio === 'off') {
-    soundEl.innerHTML = '<img id="sound" src="/images/sound_off.png">';
+    soundEl.innerHTML = '<img id="sound" src="./images/sound_off.png">';
     music.pause();
   }
 }
@@ -282,7 +282,7 @@ function renderBoard() {
       cellId = `r${rowIdx}c${colIdx}`;
       let currentCell = document.getElementById(cellId);
       if (board[rowIdx][colIdx].flag === true) {
-        currentCell.firstChild.innerHTML = `<img id="flagImg" src="/images/flag.png">`;
+        currentCell.firstChild.innerHTML = `<img id="flagImg" src="./images/flag.png">`;
       } else if (board[rowIdx][colIdx].flag === false) {
         if (currentCell.hasChildNodes) {
           currentCell.innerHTML = `<div id="r${rowIdx}c${colIdx}"></div>`;
@@ -351,7 +351,7 @@ function showBombs() {
       let currentCell = document.getElementById(cellId);
       if (board[rowIdx][colIdx].isBomb === true) {
         currentCell.style.backgroundColor = '#CC444B';
-        currentCell.innerHTML = '<img id="bombImg" src="/images/bomb.png">';
+        currentCell.innerHTML = '<img id="bombImg" src="./images/bomb.png">';
       }
     });
   });
