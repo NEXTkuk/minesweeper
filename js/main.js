@@ -10,7 +10,7 @@ let clock;
 let test = 0;
 
 /*----- constants -----*/
-const music = new Audio('/Sound/track.mp3');
+const music = new Audio('./Sound/track.mp3');
 music.loop = true;
 
 /*----- cached elements  -----*/
